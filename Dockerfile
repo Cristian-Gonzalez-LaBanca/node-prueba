@@ -21,7 +21,7 @@ RUN apt-get update -y
 RUN chmod -R 777 /usr/share/nginx/html
 # Copying compiled code and nginx config to different folder
 # NOTE: This path may change according to your project's output folder 
-COPY --from=build /app/dist/prueba-angular /usr/share/nginx/html
+COPY --from=build /app/dist/mat-cafe-front-end-sofka /usr/share/nginx/html
 # Create necessary directories with proper permissions
 RUN mkdir -p /var/cache/nginx/client_temp
 RUN chmod -R 777 /var/cache/nginx/client_temp
