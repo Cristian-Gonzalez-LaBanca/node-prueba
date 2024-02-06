@@ -6,7 +6,7 @@
 FROM node:20 AS build
 WORKDIR /app
 COPY . /app/
-RUN npm install 
+RUN npm install -force
 RUN npm run build --prod
 ### STAGE 2:RUN ###
 # Defining nginx image to be used
